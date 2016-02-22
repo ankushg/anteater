@@ -9,6 +9,9 @@
 #import "CompassViewController.h"
 #import "AnteaterREST.h"
 
+#define DEGREES_TO_RADIANS(degrees) ((degrees / 180.0) * M_PI)
+#define RADIANS_TO_DEGREES(radians) (radians * (180.0 / M_PI))
+
 @interface CompassViewController ()
 
 @end
@@ -17,9 +20,10 @@
     NSArray *_anthills;
     CLLocationManager *_mgr;
     UIImage *_image;
-    BOOL gotLoc;
-    CLLocationCoordinate2D _lastLoc, _userLoc, _targetLoc;
+    BOOL gotLoc, gotHeading;
+    CLLocation *_lastLoc, *_userLoc, *_targetLoc;
     CGFloat _curHeading, _lastHeading, _scale, _lastMagHeading;
+    // TODO: determine use of _lastLoc, _lastHeading, _scale, and _lastMagHeading
 }
 
 - (void)viewDidLoad {
@@ -37,6 +41,7 @@
         if (hills)
             _anthills = [hills objectForKey:@"anthills"];
         [_picker reloadAllComponents];
+        _targetLoc = [self curSelectedLocation];
     }];
     
     self.distanceLabel.text = @"";
@@ -52,16 +57,52 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (double) computeDegreesFromLocation:(CLLocation *) src toLocation:(CLLocation *) dst
+{
+    double lon1 = DEGREES_TO_RADIANS(src.coordinate.longitude);
+    double lat1 = DEGREES_TO_RADIANS(src.coordinate.latitude);
+    double lon2 = DEGREES_TO_RADIANS(dst.coordinate.longitude);
+    double lat2 = DEGREES_TO_RADIANS(dst.coordinate.latitude);
+    
+    double angleRadians = atan2(sin(lon2-lon1)*cos(lat2), cos(lat1)*sin(lat2)-sin(lat1)*cos(lat2)*cos(lon2-lon1));
+    
+    return RADIANS_TO_DEGREES(angleRadians);
+}
 
-//TODO: Implement me
+- (void) updateInterface
+{
+    if (gotLoc && gotHeading) {
+        // both are in degrees
+        double thetaOne = [self computeDegreesFromLocation:_userLoc toLocation:_targetLoc];
+        double thetaTwo = _curHeading;
+
+        double heading =  thetaOne - thetaTwo;
+        double distance = [_userLoc distanceFromLocation:_targetLoc];
+        
+        self.distanceLabel.text = [NSString stringWithFormat: @"%4fkm", distance/1000];
+        self.headingLabel.text = [NSString stringWithFormat:@"%3f%@", heading, @"\u00B0"];
+        _needle.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(heading));
+    }
+}
+
+#pragma mark - CLLocationManagerDelegate Methods -
+
 - (void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading {
-    //your code goes here
+    _lastHeading = _curHeading;
+    _curHeading = newHeading.trueHeading;
+    
+    gotHeading = TRUE;
+   
+    [self updateInterface];
 }
 
 
-//TODO: Implement me
 -(void)locationManager:(CLLocationManager*)manager didUpdateLocations:(nonnull NSArray<CLLocation *> *)locations {
-    //your code goes here
+    _lastLoc = _userLoc;
+    _userLoc = [locations lastObject];
+    gotLoc = TRUE;
+
+    [self updateInterface];
 }
 
 
@@ -79,19 +120,18 @@
     return [[_anthills objectAtIndex:row] objectForKey:@"id"];
 }
 
--(CLLocationCoordinate2D) curSelectedLocation {
-    
+-(CLLocation *) curSelectedLocation {
     NSDictionary *d = [_anthills objectAtIndex:[_picker selectedRowInComponent:0]];
-    CLLocationCoordinate2D hill = CLLocationCoordinate2DMake([[d objectForKey:@"lat"] floatValue] , [[d objectForKey:@"lon"] floatValue]);
+    CLLocation *hill = [[CLLocation alloc] initWithLatitude:[[d objectForKey:@"lat"] floatValue] longitude:[[d objectForKey:@"lon"] floatValue]];
     return hill;
 
 }
 
-//TODO: Implement me
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component __TVOS_PROHIBITED
 {
-    //your code goes here
-
+    _targetLoc = [self curSelectedLocation];
+    
+    [self updateInterface];
 }
 
 

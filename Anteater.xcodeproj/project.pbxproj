@@ -464,6 +464,7 @@
 					};
 					DBDF15A51C46955900B45C35 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 5YEZ95FQB7;
 					};
 				};
 			};
@@ -680,6 +681,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -691,7 +693,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.mit.Anteater;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ankushg.Anteater;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -700,6 +702,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -711,7 +714,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.mit.Anteater;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ankushg.Anteater;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
