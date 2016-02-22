@@ -44,7 +44,8 @@
             }
             [self updateMapView];
             if ([[_oldHills allKeys] count] != [[_hills allKeys] count]) {
-                [self resizeMap];
+                // Commented out so that MapView rotates with heading
+                //[self resizeMap];
             }
         }
         
