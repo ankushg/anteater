@@ -9,9 +9,6 @@
 #import "CompassViewController.h"
 #import "AnteaterREST.h"
 
-#define DEGREES_TO_RADIANS(degrees) ((degrees / 180.0) * M_PI)
-#define RADIANS_TO_DEGREES(radians) (radians * (180.0 / M_PI))
-
 @interface CompassViewController ()
 
 @end
@@ -59,14 +56,14 @@
 
 - (double) computeDegreesFromLocation:(CLLocation *) src toLocation:(CLLocation *) dst
 {
-    double lon1 = DEGREES_TO_RADIANS(src.coordinate.longitude);
-    double lat1 = DEGREES_TO_RADIANS(src.coordinate.latitude);
-    double lon2 = DEGREES_TO_RADIANS(dst.coordinate.longitude);
-    double lat2 = DEGREES_TO_RADIANS(dst.coordinate.latitude);
+    double lon1 = degToRad(src.coordinate.longitude);
+    double lat1 = degToRad(src.coordinate.latitude);
+    double lon2 = degToRad(dst.coordinate.longitude);
+    double lat2 = degToRad(dst.coordinate.latitude);
     
     double angleRadians = atan2(sin(lon2-lon1)*cos(lat2), cos(lat1)*sin(lat2)-sin(lat1)*cos(lat2)*cos(lon2-lon1));
     
-    return RADIANS_TO_DEGREES(angleRadians);
+    return radToDeg(angleRadians);
 }
 
 - (void) updateInterface
@@ -81,7 +78,7 @@
         
         self.distanceLabel.text = [NSString stringWithFormat: @"%4fkm", distance/1000];
         self.headingLabel.text = [NSString stringWithFormat:@"%3f%@", heading, @"\u00B0"];
-        _needle.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(heading));
+        _needle.transform = CGAffineTransformMakeRotation(degToRad(heading));
     }
 }
 
