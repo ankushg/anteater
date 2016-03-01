@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ACB246331C85108E0040A04B /* SensorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB246321C85108E0040A04B /* SensorModel.swift */; };
+		ACB4CA6C1C85F10800F78B00 /* RegexHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB4CA6B1C85F10800F78B00 /* RegexHelper.swift */; };
 		DB4946E81C4ECEDC009F6FB0 /* SensorDataPlotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4946E71C4ECEDC009F6FB0 /* SensorDataPlotViewController.m */; };
 		DB5D12971C5457C4007E9528 /* LeaderboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5D12961C5457C4007E9528 /* LeaderboardViewController.m */; };
 		DB5D129A1C5459B9007E9528 /* LeaderboardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5D12991C5459B9007E9528 /* LeaderboardCell.m */; };
@@ -29,7 +31,6 @@
 		DBDF15B71C46955900B45C35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBDF15B51C46955900B45C35 /* Main.storyboard */; };
 		DBDF15B91C46955900B45C35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBDF15B81C46955900B45C35 /* Assets.xcassets */; };
 		DBDF15BC1C46955900B45C35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBDF15BA1C46955900B45C35 /* LaunchScreen.storyboard */; };
-		DBDF15CA1C4695CA00B45C35 /* SensorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDF15C91C4695CA00B45C35 /* SensorModel.m */; };
 		DBDF15CD1C469AA400B45C35 /* BLESensorReading.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDF15CC1C469AA400B45C35 /* BLESensorReading.m */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		ACB246311C85108E0040A04B /* Anteater-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Anteater-Bridging-Header.h"; sourceTree = "<group>"; };
+		ACB246321C85108E0040A04B /* SensorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorModel.swift; sourceTree = "<group>"; };
+		ACB4CA6B1C85F10800F78B00 /* RegexHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexHelper.swift; sourceTree = "<group>"; };
 		DB4946931C4ECE83009F6FB0 /* CorePlot.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CorePlot.framework; sourceTree = "<group>"; };
 		DB4946951C4ECE83009F6FB0 /* CorePlot-CocoaTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CorePlot-CocoaTouch.h"; sourceTree = "<group>"; };
 		DB4946961C4ECE83009F6FB0 /* CPTAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTAnimation.h; sourceTree = "<group>"; };
@@ -175,8 +179,6 @@
 		DBDF15B81C46955900B45C35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBDF15BB1C46955900B45C35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBDF15BD1C46955900B45C35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DBDF15C81C4695CA00B45C35 /* SensorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensorModel.h; sourceTree = "<group>"; };
-		DBDF15C91C4695CA00B45C35 /* SensorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensorModel.m; sourceTree = "<group>"; };
 		DBDF15CB1C469AA400B45C35 /* BLESensorReading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLESensorReading.h; sourceTree = "<group>"; };
 		DBDF15CC1C469AA400B45C35 /* BLESensorReading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLESensorReading.m; sourceTree = "<group>"; };
 		DBEBBD1B1C6519710079BD25 /* CompassViewController-stripped.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CompassViewController-stripped.m"; sourceTree = "<group>"; };
@@ -392,11 +394,12 @@
 				DBDF15B51C46955900B45C35 /* Main.storyboard */,
 				DB1A4E961C5D6CD500B88518 /* Map */,
 				DB1A4E971C5D6CF600B88518 /* Sensor List and Plot */,
-				DBDF15C81C4695CA00B45C35 /* SensorModel.h */,
-				DBDF15C91C4695CA00B45C35 /* SensorModel.m */,
+				ACB246321C85108E0040A04B /* SensorModel.swift */,
 				DB9920101C52E33500ED881F /* SettingsModel.h */,
 				DB9920111C52E33500ED881F /* SettingsModel.m */,
 				DBDF15A91C46955900B45C35 /* Supporting Files */,
+				ACB246311C85108E0040A04B /* Anteater-Bridging-Header.h */,
+				ACB4CA6B1C85F10800F78B00 /* RegexHelper.swift */,
 			);
 			path = Anteater;
 			sourceTree = "<group>";
@@ -523,13 +526,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB9920121C52E33500ED881F /* SettingsModel.m in Sources */,
-				DBDF15CA1C4695CA00B45C35 /* SensorModel.m in Sources */,
 				DB9920151C52E42E00ED881F /* LoginViewController.m in Sources */,
 				DB9920091C5133EC00ED881F /* AnteaterREST.m in Sources */,
 				DB99200C1C526A2000ED881F /* AnthillMapView.m in Sources */,
+				ACB246331C85108E0040A04B /* SensorModel.swift in Sources */,
 				DBDF15B41C46955900B45C35 /* AnthillMapViewController.m in Sources */,
 				DBDF15AE1C46955900B45C35 /* AppDelegate.m in Sources */,
 				DB5D129A1C5459B9007E9528 /* LeaderboardCell.m in Sources */,
+				ACB4CA6C1C85F10800F78B00 /* RegexHelper.swift in Sources */,
 				DB4946E81C4ECEDC009F6FB0 /* SensorDataPlotViewController.m in Sources */,
 				DBD46E7B1C57A7700094D004 /* CompassView.m in Sources */,
 				DB5D12971C5457C4007E9528 /* LeaderboardViewController.m in Sources */,
@@ -681,6 +685,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -695,6 +700,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ankushg.Anteater;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Anteater/Anteater-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -702,6 +709,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -716,6 +724,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ankushg.Anteater;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Anteater/Anteater-Bridging-Header.h";
 			};
 			name = Release;
 		};

@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "SensorModel.h"
+#import "Anteater-Swift.h"
 #import "AnteaterREST.h"
 #import <CoreLocation/CoreLocation.h>
 #import "SettingsModel.h"

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SensorModel.h"
+#import "Anteater-Swift.h"
 
 @interface SensorReadingTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate, SensorModelDelegate>
 

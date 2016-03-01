@@ -8,6 +8,8 @@
 
 #import "SensorReadingTableViewController.h"
 #import "SensorDataPlotViewController.h"
+#import "BLESensorReading.h"
+#import "Anteater-Swift.h"
 
 @interface SensorReadingTableViewController ()
 @end

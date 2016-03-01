@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "SensorModel.h"
+#import "Anteater-Swift.h"
 
 @interface SensorModelTest : XCTestCase
 
