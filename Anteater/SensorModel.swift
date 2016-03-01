@@ -111,7 +111,7 @@ import CoreBluetooth
             if let output = String(data: value, encoding: NSUTF8StringEncoding) {
                 if output.hasPrefix("H") {
                     data = output
-                } else{
+                } else {
                     data += output
                 }
                 processData()
