@@ -68,7 +68,7 @@
         <!--Leaderboard-->
         <scene sceneID="HvP-yg-7gn">
             <objects>
-                <tableViewController id="nNt-OW-5nw" customClass="LeaderboardViewController" sceneMemberID="viewController">
+                <tableViewController id="nNt-OW-5nw" customClass="LeaderboardViewController" customModule="Anteater" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="9VR-pA-VJd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

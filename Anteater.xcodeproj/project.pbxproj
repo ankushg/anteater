@@ -11,11 +11,11 @@
 		ACB4CA6C1C85F10800F78B00 /* RegexHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB4CA6B1C85F10800F78B00 /* RegexHelper.swift */; };
 		ACC051821C8623BF00AB067F /* CompassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC051811C8623BF00AB067F /* CompassView.swift */; };
 		ACC051841C862AA400AB067F /* AnthillMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC051831C862AA300AB067F /* AnthillMapViewController.swift */; };
+		ACC0518A1C86477500AB067F /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC051891C86477500AB067F /* LeaderboardViewController.swift */; };
 		ACD747A31C85F411000E9EC9 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD747A21C85F411000E9EC9 /* SettingsModel.swift */; };
 		ACD747A51C85F9C7000E9EC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD747A41C85F9C7000E9EC9 /* AppDelegate.swift */; };
 		ACD747A71C8601DE000E9EC9 /* LeaderboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD747A61C8601DE000E9EC9 /* LeaderboardCell.swift */; };
 		DB4946E81C4ECEDC009F6FB0 /* SensorDataPlotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4946E71C4ECEDC009F6FB0 /* SensorDataPlotViewController.m */; };
-		DB5D12971C5457C4007E9528 /* LeaderboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5D12961C5457C4007E9528 /* LeaderboardViewController.m */; };
 		DB970A631C5C411D00A708CF /* CompassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB970A621C5C411D00A708CF /* CompassViewController.m */; };
 		DB9920051C51275A00ED881F /* CorePlot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB4946931C4ECE83009F6FB0 /* CorePlot.framework */; };
 		DB9920061C51276000ED881F /* CorePlot.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DB4946931C4ECE83009F6FB0 /* CorePlot.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -62,6 +62,7 @@
 		ACB4CA6B1C85F10800F78B00 /* RegexHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexHelper.swift; sourceTree = "<group>"; };
 		ACC051811C8623BF00AB067F /* CompassView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassView.swift; sourceTree = "<group>"; };
 		ACC051831C862AA300AB067F /* AnthillMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnthillMapViewController.swift; sourceTree = "<group>"; };
+		ACC051891C86477500AB067F /* LeaderboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		ACD747A21C85F411000E9EC9 /* SettingsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
 		ACD747A41C85F9C7000E9EC9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACD747A61C8601DE000E9EC9 /* LeaderboardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardCell.swift; sourceTree = "<group>"; };
@@ -147,8 +148,6 @@
 		DB4946E31C4ECE83009F6FB0 /* NSNumberExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNumberExtensions.h; sourceTree = "<group>"; };
 		DB4946E61C4ECEDC009F6FB0 /* SensorDataPlotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensorDataPlotViewController.h; sourceTree = "<group>"; };
 		DB4946E71C4ECEDC009F6FB0 /* SensorDataPlotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensorDataPlotViewController.m; sourceTree = "<group>"; };
-		DB5D12951C5457C4007E9528 /* LeaderboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderboardViewController.h; sourceTree = "<group>"; };
-		DB5D12961C5457C4007E9528 /* LeaderboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderboardViewController.m; sourceTree = "<group>"; };
 		DB970A611C5C411D00A708CF /* CompassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompassViewController.h; sourceTree = "<group>"; };
 		DB970A621C5C411D00A708CF /* CompassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompassViewController.m; sourceTree = "<group>"; };
 		DB9920021C5126B900ED881F /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
@@ -236,8 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				ACD747A61C8601DE000E9EC9 /* LeaderboardCell.swift */,
-				DB5D12951C5457C4007E9528 /* LeaderboardViewController.h */,
-				DB5D12961C5457C4007E9528 /* LeaderboardViewController.m */,
+				ACC051891C86477500AB067F /* LeaderboardViewController.swift */,
 			);
 			name = Leaderboard;
 			sourceTree = "<group>";
@@ -521,8 +519,8 @@
 				ACC051821C8623BF00AB067F /* CompassView.swift in Sources */,
 				ACB4CA6C1C85F10800F78B00 /* RegexHelper.swift in Sources */,
 				DB4946E81C4ECEDC009F6FB0 /* SensorDataPlotViewController.m in Sources */,
-				DB5D12971C5457C4007E9528 /* LeaderboardViewController.m in Sources */,
 				ACD747A51C85F9C7000E9EC9 /* AppDelegate.swift in Sources */,
+				ACC0518A1C86477500AB067F /* LeaderboardViewController.swift in Sources */,
 				DBDF15B11C46955900B45C35 /* SensorReadingTableViewController.m in Sources */,
 				DB970A631C5C411D00A708CF /* CompassViewController.m in Sources */,
 				ACD747A71C8601DE000E9EC9 /* LeaderboardCell.swift in Sources */,
