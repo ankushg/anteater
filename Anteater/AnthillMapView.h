@@ -8,7 +8,9 @@
 
 #import <MapKit/MapKit.h>
 #import <UIKit/UIKit.h>
-#import "Anteater-Swift.h"
+
+// Forward declaration of Swift class
+@class CompassView;
 
 @interface AnthillMapView : MKMapView<MKMapViewDelegate>
 @property IBOutlet CompassView *cv;

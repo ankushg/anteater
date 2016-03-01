@@ -9,6 +9,7 @@
 #import "AnthillMapView.h"
 #import "AnteaterREST.h"
 #import "AnthillAnnotation.h"
+#import "Anteater-Swift.h"
 
 @implementation AnthillMapView
 {
