@@ -4,4 +4,3 @@
 
 #import "BLESensorReading.h"
 #import "AnteaterREST.h"
-#import "SettingsModel.h"

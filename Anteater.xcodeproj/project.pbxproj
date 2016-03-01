@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		ACB246331C85108E0040A04B /* SensorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB246321C85108E0040A04B /* SensorModel.swift */; };
 		ACB4CA6C1C85F10800F78B00 /* RegexHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB4CA6B1C85F10800F78B00 /* RegexHelper.swift */; };
+		ACD747A31C85F411000E9EC9 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD747A21C85F411000E9EC9 /* SettingsModel.swift */; };
 		DB4946E81C4ECEDC009F6FB0 /* SensorDataPlotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4946E71C4ECEDC009F6FB0 /* SensorDataPlotViewController.m */; };
 		DB5D12971C5457C4007E9528 /* LeaderboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5D12961C5457C4007E9528 /* LeaderboardViewController.m */; };
 		DB5D129A1C5459B9007E9528 /* LeaderboardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5D12991C5459B9007E9528 /* LeaderboardCell.m */; };
@@ -18,7 +19,6 @@
 		DB9920091C5133EC00ED881F /* AnteaterREST.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9920081C5133EC00ED881F /* AnteaterREST.m */; };
 		DB99200C1C526A2000ED881F /* AnthillMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB99200B1C526A2000ED881F /* AnthillMapView.m */; };
 		DB99200F1C526D3400ED881F /* AnthillAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = DB99200E1C526D3400ED881F /* AnthillAnnotation.m */; };
-		DB9920121C52E33500ED881F /* SettingsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9920111C52E33500ED881F /* SettingsModel.m */; };
 		DB9920151C52E42E00ED881F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9920141C52E42E00ED881F /* LoginViewController.m */; };
 		DB9920191C52E6E600ED881F /* LoginView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB9920181C52E6E600ED881F /* LoginView.storyboard */; };
 		DB9920231C53F51C00ED881F /* AnteaterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9920221C53F51C00ED881F /* AnteaterTests.m */; };
@@ -61,6 +61,7 @@
 		ACB246311C85108E0040A04B /* Anteater-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Anteater-Bridging-Header.h"; sourceTree = "<group>"; };
 		ACB246321C85108E0040A04B /* SensorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorModel.swift; sourceTree = "<group>"; };
 		ACB4CA6B1C85F10800F78B00 /* RegexHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexHelper.swift; sourceTree = "<group>"; };
+		ACD747A21C85F411000E9EC9 /* SettingsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
 		DB4946931C4ECE83009F6FB0 /* CorePlot.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CorePlot.framework; sourceTree = "<group>"; };
 		DB4946951C4ECE83009F6FB0 /* CorePlot-CocoaTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CorePlot-CocoaTouch.h"; sourceTree = "<group>"; };
 		DB4946961C4ECE83009F6FB0 /* CPTAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTAnimation.h; sourceTree = "<group>"; };
@@ -156,8 +157,6 @@
 		DB99200B1C526A2000ED881F /* AnthillMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnthillMapView.m; sourceTree = "<group>"; };
 		DB99200D1C526D3400ED881F /* AnthillAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnthillAnnotation.h; sourceTree = "<group>"; };
 		DB99200E1C526D3400ED881F /* AnthillAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnthillAnnotation.m; sourceTree = "<group>"; };
-		DB9920101C52E33500ED881F /* SettingsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsModel.h; sourceTree = "<group>"; };
-		DB9920111C52E33500ED881F /* SettingsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsModel.m; sourceTree = "<group>"; };
 		DB9920131C52E42E00ED881F /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		DB9920141C52E42E00ED881F /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		DB9920181C52E6E600ED881F /* LoginView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LoginView.storyboard; path = ../LoginView.storyboard; sourceTree = "<group>"; };
@@ -395,8 +394,7 @@
 				DB1A4E961C5D6CD500B88518 /* Map */,
 				DB1A4E971C5D6CF600B88518 /* Sensor List and Plot */,
 				ACB246321C85108E0040A04B /* SensorModel.swift */,
-				DB9920101C52E33500ED881F /* SettingsModel.h */,
-				DB9920111C52E33500ED881F /* SettingsModel.m */,
+				ACD747A21C85F411000E9EC9 /* SettingsModel.swift */,
 				DBDF15A91C46955900B45C35 /* Supporting Files */,
 				ACB246311C85108E0040A04B /* Anteater-Bridging-Header.h */,
 				ACB4CA6B1C85F10800F78B00 /* RegexHelper.swift */,
@@ -525,7 +523,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB9920121C52E33500ED881F /* SettingsModel.m in Sources */,
+				ACD747A31C85F411000E9EC9 /* SettingsModel.swift in Sources */,
 				DB9920151C52E42E00ED881F /* LoginViewController.m in Sources */,
 				DB9920091C5133EC00ED881F /* AnteaterREST.m in Sources */,
 				DB99200C1C526A2000ED881F /* AnthillMapView.m in Sources */,

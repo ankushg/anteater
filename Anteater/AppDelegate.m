@@ -10,7 +10,6 @@
 #import "Anteater-Swift.h"
 #import "AnteaterREST.h"
 #import <CoreLocation/CoreLocation.h>
-#import "SettingsModel.h"
 #import "LoginViewController.h"
 
 @interface AppDelegate ()

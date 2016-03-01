@@ -7,9 +7,9 @@
 //
 
 #import "LoginViewController.h"
-#import "SettingsModel.h"
 #import "AnteaterREST.h"
 #import <UIKit/UIKit.h>
+#import "Anteater-Swift.h"
 
 @implementation LoginViewController
 
