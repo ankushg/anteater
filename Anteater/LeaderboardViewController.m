@@ -8,7 +8,7 @@
 
 #import "LeaderboardViewController.h"
 #import "AnteaterREST.h"
-#import "LeaderboardCell.h"
+#import "Anteater-Swift.h"
 
 @interface LeaderboardViewController ()
 
