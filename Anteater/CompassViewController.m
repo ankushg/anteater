@@ -41,7 +41,7 @@
         _targetLoc = [self curSelectedLocation];
     }];
     
-    self.distanceLabel.text = @"";
+    self.distanceLabel.text = @"Loading...";
     self.headingLabel.text = @"";
 
     [super viewDidLoad];
