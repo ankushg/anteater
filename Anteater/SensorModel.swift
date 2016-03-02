@@ -68,19 +68,19 @@ import CoreBluetooth
     func centralManager(central: CBCentralManager, didDiscoverPeripheral peripheral: CBPeripheral, advertisementData: [String : AnyObject], RSSI: NSNumber) {
         connectedPeripheral = peripheral
         peripheral.delegate = self
-        print("Discovered peripheral ", peripheral.name)
+        print("Discovered peripheral \(peripheral.name)")
         central.connectPeripheral(peripheral, options: [CBConnectPeripheralOptionNotifyOnDisconnectionKey: true])
     }
     
     func centralManager(central: CBCentralManager, didConnectPeripheral peripheral: CBPeripheral) {
-        print("Connected to peripheral ", peripheral.name)
+        print("Connected to peripheral \(peripheral.name)")
         isConnected = true
         delegate?.bleDidConnect()
         peripheral.discoverServices([CBUUID(string: SensorModel.kRblServiceUUID)])
     }
     
     func centralManager(central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: NSError?) {
-        print("Disconnected from peripheral ", peripheral.name)
+        print("Disconnected from peripheral \(peripheral.name)")
         isConnected = false
         delegate?.bleDidDisconnect()
         connectedPeripheral = nil
@@ -90,7 +90,7 @@ import CoreBluetooth
     func peripheral(peripheral: CBPeripheral, didDiscoverServices error: NSError?) {
         if let services = peripheral.services {
             for service in services {
-                print("Discovered service on peripheral ", peripheral.name)
+                print("Discovered service on peripheral \(peripheral.name)")
                 peripheral.discoverCharacteristics([CBUUID(string: SensorModel.kRblCharTxUUID)], forService: service)
             }
         }
@@ -100,7 +100,7 @@ import CoreBluetooth
     func peripheral(peripheral: CBPeripheral, didDiscoverCharacteristicsForService service: CBService, error: NSError?) {
         if let characteristics = service.characteristics {
             for c : CBCharacteristic in characteristics {
-                print("Notifying for characteristic on peripheral ", peripheral.name)
+                print("Notifying for characteristic on peripheral \(peripheral.name)")
                 peripheral.setNotifyValue(true, forCharacteristic: c)
             }
         }
@@ -121,7 +121,7 @@ import CoreBluetooth
     
     func processData() {
         for error in RegexHelper.listMatches(SensorModel.kErrorRegex, inString: data) {
-            print("Encountered Error!", error)
+            print("Encountered error: \(error)")
         }
         
         var readings = [BLESensorReading]()
