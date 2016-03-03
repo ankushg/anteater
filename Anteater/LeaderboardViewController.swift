@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 @objc class LeaderboardViewController : UITableViewController {
-    var leaderboardData: [AnyObject] = []
+    var leaderboardData: JSON = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,11 +18,9 @@ import Foundation
     }
     
     func doRefresh() {
-        AnteaterREST.getLeaderboard({ (d: [NSObject : AnyObject]!) in
-            if let data = d["users"] as? [AnyObject]{
-                self.leaderboardData = data
-                self.tableView.reloadData()
-            }
+        AnteaterREST.getLeaderboard({ (data) in
+            self.leaderboardData = data["users"]
+            self.tableView.reloadData()
         })
     }
     
@@ -44,17 +43,18 @@ import Foundation
             return tableView.dequeueReusableCellWithIdentifier("HeaderCell", forIndexPath: indexPath)
         } else {
             if let c : LeaderboardCell = tableView.dequeueReusableCellWithIdentifier("EntryCell", forIndexPath: indexPath) as? LeaderboardCell {
-                if let d = leaderboardData[indexPath.row-1] as? [NSString : AnyObject] {
-                    c.pointsField.text = d["points"]?.description
-                    if (d["device_id"] as? String == UIDevice.currentDevice().identifierForVendor?.UUIDString) {
-                        c.nameField.text = "YOU"
-                        c.nameField.font = UIFont.boldSystemFontOfSize(c.nameField.font.pointSize)
-                    } else {
-                        c.nameField.text = d["user_id"] as? String
-                        c.nameField.font = UIFont.systemFontOfSize(c.nameField.font.pointSize)
-                    }
-                    c.rankField.text = "\(CLong(indexPath.row))."
+                let d = leaderboardData[indexPath.row - 1]
+                
+                c.pointsField.text = d["points"].int?.description
+                if (d["device_id"].string == UIDevice.currentDevice().identifierForVendor?.UUIDString) {
+                    c.nameField.text = "YOU"
+                    c.nameField.font = UIFont.boldSystemFontOfSize(c.nameField.font.pointSize)
+                } else {
+                    c.nameField.text = d["user_id"].string
+                    c.nameField.font = UIFont.systemFontOfSize(c.nameField.font.pointSize)
                 }
+                c.rankField.text = "\(indexPath.row)."
+                
                 
                 return c
             }

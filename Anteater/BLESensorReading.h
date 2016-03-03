@@ -25,6 +25,7 @@ typedef enum {
 -(id)initWithReadingValue:(float)value andType:(SensorReadingType)type atTime:(NSDate *)time andSensorId:(NSString *)sensorId;
 -(NSString *)formattedValue;
 -(NSString *)toJson;
+-(NSDictionary *)toDict;
 -(UIImage *) readingIcon;
 
 @end

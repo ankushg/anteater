@@ -11,17 +11,19 @@
 		AC3BF2961C87384F0055DEDC /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3BF2951C87384F0055DEDC /* CompassViewController.swift */; };
 		ACB246331C85108E0040A04B /* SensorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB246321C85108E0040A04B /* SensorModel.swift */; };
 		ACB4CA6C1C85F10800F78B00 /* RegexHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB4CA6B1C85F10800F78B00 /* RegexHelper.swift */; };
+		ACB929E61C87AFC300D2F8ED /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC5CBC01C87975200E12E0C /* Alamofire.framework */; };
+		ACB929E71C87AFC300D2F8ED /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC5CBC11C87975200E12E0C /* SwiftyJSON.framework */; };
 		ACC051821C8623BF00AB067F /* CompassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC051811C8623BF00AB067F /* CompassView.swift */; };
 		ACC051841C862AA400AB067F /* AnthillMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC051831C862AA300AB067F /* AnthillMapViewController.swift */; };
 		ACC0518A1C86477500AB067F /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC051891C86477500AB067F /* LeaderboardViewController.swift */; };
+		ACC5CBC51C87978300E12E0C /* AnteaterREST.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC5CBC41C87978300E12E0C /* AnteaterREST.swift */; };
+		ACC5CBC81C879E2C00E12E0C /* AnthillMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC5CBC61C87979700E12E0C /* AnthillMapView.swift */; };
 		ACD747A31C85F411000E9EC9 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD747A21C85F411000E9EC9 /* SettingsModel.swift */; };
 		ACD747A51C85F9C7000E9EC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD747A41C85F9C7000E9EC9 /* AppDelegate.swift */; };
 		ACD747A71C8601DE000E9EC9 /* LeaderboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD747A61C8601DE000E9EC9 /* LeaderboardCell.swift */; };
 		DB4946E81C4ECEDC009F6FB0 /* SensorDataPlotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4946E71C4ECEDC009F6FB0 /* SensorDataPlotViewController.m */; };
 		DB9920051C51275A00ED881F /* CorePlot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB4946931C4ECE83009F6FB0 /* CorePlot.framework */; };
 		DB9920061C51276000ED881F /* CorePlot.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DB4946931C4ECE83009F6FB0 /* CorePlot.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DB9920091C5133EC00ED881F /* AnteaterREST.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9920081C5133EC00ED881F /* AnteaterREST.m */; };
-		DB99200C1C526A2000ED881F /* AnthillMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB99200B1C526A2000ED881F /* AnthillMapView.m */; };
 		DB99200F1C526D3400ED881F /* AnthillAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = DB99200E1C526D3400ED881F /* AnthillAnnotation.m */; };
 		DB9920191C52E6E600ED881F /* LoginView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB9920181C52E6E600ED881F /* LoginView.storyboard */; };
 		DB9920231C53F51C00ED881F /* AnteaterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9920221C53F51C00ED881F /* AnteaterTests.m */; };
@@ -65,6 +67,10 @@
 		ACC051811C8623BF00AB067F /* CompassView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassView.swift; sourceTree = "<group>"; };
 		ACC051831C862AA300AB067F /* AnthillMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnthillMapViewController.swift; sourceTree = "<group>"; };
 		ACC051891C86477500AB067F /* LeaderboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
+		ACC5CBC01C87975200E12E0C /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		ACC5CBC11C87975200E12E0C /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		ACC5CBC41C87978300E12E0C /* AnteaterREST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnteaterREST.swift; sourceTree = "<group>"; };
+		ACC5CBC61C87979700E12E0C /* AnthillMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnthillMapView.swift; sourceTree = "<group>"; };
 		ACD747A21C85F411000E9EC9 /* SettingsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
 		ACD747A41C85F9C7000E9EC9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACD747A61C8601DE000E9EC9 /* LeaderboardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardCell.swift; sourceTree = "<group>"; };
@@ -151,10 +157,6 @@
 		DB4946E61C4ECEDC009F6FB0 /* SensorDataPlotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensorDataPlotViewController.h; sourceTree = "<group>"; };
 		DB4946E71C4ECEDC009F6FB0 /* SensorDataPlotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensorDataPlotViewController.m; sourceTree = "<group>"; };
 		DB9920021C5126B900ED881F /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
-		DB9920071C5133EC00ED881F /* AnteaterREST.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnteaterREST.h; sourceTree = "<group>"; };
-		DB9920081C5133EC00ED881F /* AnteaterREST.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnteaterREST.m; sourceTree = "<group>"; };
-		DB99200A1C526A2000ED881F /* AnthillMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnthillMapView.h; sourceTree = "<group>"; };
-		DB99200B1C526A2000ED881F /* AnthillMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnthillMapView.m; sourceTree = "<group>"; };
 		DB99200D1C526D3400ED881F /* AnthillAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnthillAnnotation.h; sourceTree = "<group>"; };
 		DB99200E1C526D3400ED881F /* AnthillAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnthillAnnotation.m; sourceTree = "<group>"; };
 		DB9920181C52E6E600ED881F /* LoginView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LoginView.storyboard; path = ../LoginView.storyboard; sourceTree = "<group>"; };
@@ -186,6 +188,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB9920051C51275A00ED881F /* CorePlot.framework in Frameworks */,
+				ACB929E61C87AFC300D2F8ED /* Alamofire.framework in Frameworks */,
+				ACB929E71C87AFC300D2F8ED /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,8 +210,7 @@
 			children = (
 				DB99200D1C526D3400ED881F /* AnthillAnnotation.h */,
 				DB99200E1C526D3400ED881F /* AnthillAnnotation.m */,
-				DB99200A1C526A2000ED881F /* AnthillMapView.h */,
-				DB99200B1C526A2000ED881F /* AnthillMapView.m */,
+				ACC5CBC61C87979700E12E0C /* AnthillMapView.swift */,
 				ACC051831C862AA300AB067F /* AnthillMapViewController.swift */,
 			);
 			name = Map;
@@ -343,6 +346,8 @@
 		DBDF159D1C46955900B45C35 = {
 			isa = PBXGroup;
 			children = (
+				ACC5CBC01C87975200E12E0C /* Alamofire.framework */,
+				ACC5CBC11C87975200E12E0C /* SwiftyJSON.framework */,
 				DB9920021C5126B900ED881F /* libCorePlot-CocoaTouch.a */,
 				DB4946931C4ECE83009F6FB0 /* CorePlot.framework */,
 				DB4946941C4ECE83009F6FB0 /* CorePlotHeaders */,
@@ -364,8 +369,7 @@
 		DBDF15A81C46955900B45C35 /* Anteater */ = {
 			isa = PBXGroup;
 			children = (
-				DB9920071C5133EC00ED881F /* AnteaterREST.h */,
-				DB9920081C5133EC00ED881F /* AnteaterREST.m */,
+				ACC5CBC41C87978300E12E0C /* AnteaterREST.swift */,
 				ACD747A41C85F9C7000E9EC9 /* AppDelegate.swift */,
 				DBDF15B81C46955900B45C35 /* Assets.xcassets */,
 				DB1A4E951C5D6CC700B88518 /* Compass */,
@@ -421,6 +425,7 @@
 				DBDF15A31C46955900B45C35 /* Frameworks */,
 				DBDF15A41C46955900B45C35 /* Resources */,
 				DB4946EA1C4ED6F3009F6FB0 /* CopyFiles */,
+				ACB929E81C87AFE900D2F8ED /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -490,6 +495,24 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		ACB929E81C87AFE900D2F8ED /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DB99201C1C53F51C00ED881F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -506,15 +529,15 @@
 			files = (
 				ACC051841C862AA400AB067F /* AnthillMapViewController.swift in Sources */,
 				ACD747A31C85F411000E9EC9 /* SettingsModel.swift in Sources */,
-				DB9920091C5133EC00ED881F /* AnteaterREST.m in Sources */,
-				DB99200C1C526A2000ED881F /* AnthillMapView.m in Sources */,
 				AC3BF2941C872E040055DEDC /* LoginViewcontroller.swift in Sources */,
 				ACB246331C85108E0040A04B /* SensorModel.swift in Sources */,
+				ACC5CBC81C879E2C00E12E0C /* AnthillMapView.swift in Sources */,
 				ACC051821C8623BF00AB067F /* CompassView.swift in Sources */,
 				ACB4CA6C1C85F10800F78B00 /* RegexHelper.swift in Sources */,
 				DB4946E81C4ECEDC009F6FB0 /* SensorDataPlotViewController.m in Sources */,
 				ACD747A51C85F9C7000E9EC9 /* AppDelegate.swift in Sources */,
 				ACC0518A1C86477500AB067F /* LeaderboardViewController.swift in Sources */,
+				ACC5CBC51C87978300E12E0C /* AnteaterREST.swift in Sources */,
 				DBDF15B11C46955900B45C35 /* SensorReadingTableViewController.m in Sources */,
 				ACD747A71C8601DE000E9EC9 /* LeaderboardCell.swift in Sources */,
 				DBDF15CD1C469AA400B45C35 /* BLESensorReading.m in Sources */,
@@ -669,6 +692,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Anteater/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -693,6 +717,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Anteater/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

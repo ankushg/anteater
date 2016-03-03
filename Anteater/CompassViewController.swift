@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 @objc class CompassViewController : UIViewController, CLLocationManagerDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     
@@ -14,7 +15,7 @@ import Foundation
     @IBOutlet var picker : UIPickerView!;
     @IBOutlet var headingLabel, distanceLabel : UILabel!
     
-    var anthills: [[String : AnyObject]] = []
+    var anthills: JSON = []
     var mgr: CLLocationManager?
     var image: UIImage?
     var gotLoc = false
@@ -55,10 +56,8 @@ import Foundation
         picker?.dataSource = self
         picker?.delegate = self
         
-        AnteaterREST.getListOfAnthills { (data : [NSObject : AnyObject]!) in
-            if let hills = data as? [String : AnyObject] {
-                self.anthills = hills["anthills"] as! [[String : AnyObject]]
-            }
+        AnteaterREST.getListOfAnthills { (data) in
+            self.anthills = data["anthills"]
             self.picker?.reloadAllComponents()
             self.targetLoc = self.curSelectedLocation()
         }
@@ -86,8 +85,8 @@ import Foundation
     }
     
 	func curSelectedLocation() -> CLLocation? {
-		var d: [String : AnyObject] = anthills[picker.selectedRowInComponent(0)]
-        if let lat = d["lat"]?.doubleValue, let lon = d["lon"]?.doubleValue {
+		var d = anthills[picker.selectedRowInComponent(0)]
+        if let lat = d["lat"].double, let lon = d["lon"].double {
             return CLLocation(latitude: lat, longitude: lon)
         } else {
             return nil
@@ -119,8 +118,8 @@ import Foundation
     }
 
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if let id = anthills[row]["id"]?.description{
-            if let description = anthills[row]["description"]?.description {
+        if let id = anthills[row]["id"].string{
+            if let description = anthills[row]["description"].string {
                 return "\(id) - \(description)"
             } else {
                 return id

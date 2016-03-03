@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, LoginViewDelegate {
         SensorModel.instance.startScanning()
         
         AnteaterREST.getListOfAnthills { (hills) in
-            print("Got hills", hills.description)
+            print("Got hills: \(hills)")
         }
         
         locMgr = CLLocationManager()

@@ -48,9 +48,12 @@
 }
 
 -(NSString *)toJson {
-    NSDictionary *d = @{@"value":@(_value),@"type":@(_type),@"timestamp":@([_time timeIntervalSince1970]),@"userid":[[[UIDevice currentDevice] identifierForVendor] UUIDString],@"sensorid":_sensorId};
-    NSData *data = [NSJSONSerialization dataWithJSONObject:d options:NSJSONWritingPrettyPrinted error:NULL];
+    NSData *data = [NSJSONSerialization dataWithJSONObject:[self toDict] options:NSJSONWritingPrettyPrinted error:NULL];
     return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+}
+
+-(NSDictionary *)toDict {
+    return @{@"value":@(_value),@"type":@(_type),@"timestamp":@([_time timeIntervalSince1970]),@"userid":[[[UIDevice currentDevice] identifierForVendor] UUIDString],@"sensorid":_sensorId};
 }
 
 @end
