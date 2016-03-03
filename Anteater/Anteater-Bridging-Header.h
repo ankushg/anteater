@@ -3,4 +3,3 @@
 //
 
 #import "BLESensorReading.h"
-#import "AnthillAnnotation.h"

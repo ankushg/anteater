@@ -75,12 +75,7 @@ import SwiftyJSON
         self.removeAnnotations(annotsToRemove)
 
         for hill in toAdd {
-            // TODO: fix this by making AnthillAnnotation take in a JSON
-            var dict = [String: AnyObject]()
-            hill.forEach({ (key, value) in
-                dict[key] = value.object
-            })
-            let a: AnthillAnnotation = AnthillAnnotation(anthillData: dict)
+            let a: AnthillAnnotation = AnthillAnnotation(anthillData: hill)
             
             self.addAnnotation(a)
             if let hid = hill["id"].string {
@@ -90,45 +85,31 @@ import SwiftyJSON
     }
     
     func resizeMap() {
-        // TODO
-        /*
-        float maxLat=-500,maxLon=-500,minLat=500,minLon=500;
-        
-        for (NSDictionary *hill in [_hills allValues]) {
-        float lat = [[hill objectForKey:@"lat"] floatValue];
-        float lon = [[hill objectForKey:@"lon"] floatValue];
-        
-        if (lat > maxLat) {
-        maxLat =lat;
+        let lats : [Double] = hills.flatMap { (_, hill) -> Double? in
+            return hill["lat"].double
         }
-        if (lat < minLat) {
-        minLat = lat;
-        }
-        if (lon > maxLon) {
-        maxLon = lon;
-        }
-        if (lon < minLon) {
-        minLon = lon;
-        }
-        }
-        if (maxLat != -500) { // at least one point
-        maxLat += (maxLat - minLat) * .02; minLat -= (maxLat - minLat) * .02;
-        maxLon += (maxLon - minLon) * .02; minLon -= (maxLon - minLon) * .02;
         
-        MKCoordinateRegion region = self.region;
-        region.center = CLLocationCoordinate2DMake(minLat + (maxLat-minLat)/2, minLon + (maxLon-minLon)/2);
-        float height = maxLat - minLat;
-        float width = maxLon - minLon;
-        
-        if (height < .01) height = .01;
-        if (width < .01) width = .01;
-        
-        region.span.latitudeDelta = height;
-        region.span.longitudeDelta = width;
-        
-        [self setRegion:region animated:YES];
+        let lons : [Double] = hills.flatMap { (_, hill) -> Double? in
+            return hill["lat"].double
         }
-        */
+        
+        var minLat = lats.minElement() ?? 500
+        var maxLat = lats.maxElement() ?? -500
+        var minLon = lons.minElement() ?? 500
+        var maxLon = lons.maxElement() ?? -500
+        
+        if hills.count > 0 {
+            maxLat += (maxLat - minLat) * 0.02; minLat -= (maxLat - minLat) * 0.02
+            maxLon += (maxLon - minLon) * 0.02; minLon -= (maxLon - minLon) * 0.02
+ 
+            var r = self.region
+            r.center = CLLocationCoordinate2DMake(minLat + (maxLat-minLat)/2, minLon + (maxLon-minLon)/2)
+            let height = max(maxLat - minLat, 0.01)
+            let width = max(maxLon - minLon, 0.01)
+            r.span.latitudeDelta = height
+            r.span.longitudeDelta = width
+            self.setRegion(r, animated: true)
+        }
     }
     
     //MARK: MKMapViewDelegate

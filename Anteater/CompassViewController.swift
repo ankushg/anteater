@@ -9,6 +9,8 @@
 import Foundation
 import SwiftyJSON
 
+import MapKit
+
 @objc class CompassViewController : UIViewController, CLLocationManagerDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     
     @IBOutlet var needle : CompassView!;
